@@ -5,31 +5,43 @@ body, html {
 }
 .login-container {
     display: flex;
-    justify-content: center;
-    align-items: center;
     height: 100vh;
+}
+
+.left-side {
+    flex: 1;
+    background-image: url('/workspaces/amon_app/public/IMG_9805.jpg');
     background-size: cover;
     background-position: center;
-    margin: 0;
-    padding: 0;
+    background-size: cover;
+    background-position: center;
+}
+
+.right-side {
+    flex: 1;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #ffffff;
 }
     
 .login-form {
-    background: rgba(255, 255, 255, 0.8); 
     padding: 20px;
     border-radius: 8px;
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-    width: 350px;
+    width: 600px;
+    height: 500px;
 }
     
 .login-form h2 {
-    margin-bottom: 25px;
+    margin-bottom: 60px;
     color: #3e0d83;
-    text-align: center;
+    text-align: left;
+    font-size: 40px;
 }
   
 h2 {
-    font-weight: 700; /* ใช้น้ำหนักฟอนต์ที่หนาขึ้น */
+    font-weight: 700; 
 }
     
 .form-group {
@@ -38,7 +50,9 @@ h2 {
     
 .form-group label {
     display: block;
+    text-align: left;
     margin-bottom: 5px;
+    font-size: 20px;
     font-weight: 500;
     transition: color 0.3s;
 }
@@ -80,6 +94,21 @@ h2 {
     font-size: 14px;
 }
 
+.register-button {
+    width: 100%;
+    padding: 10px;
+    background-color: #6c0eef;
+    border: none;
+    color: white;
+    font-size: 20px;
+    cursor: pointer;
+    border-radius: 4px;
+    margin-top: 6px;
+}
+
+.register-button:hover {
+    background-color: #600ed3;
+}
 
 
 .login-button {
@@ -88,7 +117,7 @@ h2 {
     background-color: #6c0eef;
     border: none;
     color: white;
-    font-size: 16px;
+    font-size: 20px;
     cursor: pointer;
     border-radius: 4px;
 }

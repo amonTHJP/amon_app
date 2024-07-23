@@ -1,5 +1,6 @@
 import React, { useState } from 'react';
 import '../styles/Login.css';
+import { ButtonBase, ButtonGroup } from '@mui/material';
 
 const Login: React.FC = () => {
     const [username, setUsername] = useState('');
@@ -19,17 +20,19 @@ const Login: React.FC = () => {
     };
 
     return (
-        <div className="login-container">
+      <div className="login-container">
+        <div className="left-side"></div>
+        <div className="right-side">
           <form onSubmit={handleSubmit} className="login-form">
-            <h2>Login</h2>
+            <h2>Sige In</h2>
             <div className="form-group">
-                <label htmlFor="username">บัญชีผู้ใช้งาน (Username)</label>
+              <label htmlFor="username">บัญชีผู้ใช้งาน (Username)</label>
               <div className="input-container">
                 <input
                   type="text"
                   id="username"
                   value={username}
-                  onChange={(e) => setUsername(e.target.value)}
+                  onChange={handleUsernameChange}
                   required
                 />
                 <i className="icon">📧</i> 
@@ -42,16 +45,18 @@ const Login: React.FC = () => {
                   type="password"
                   id="password"
                   value={password}
-                  onChange={(e) => setPassword(e.target.value)}
+                  onChange={handlePasswordChange}
                   required
                 />
                 <i className="icon">🔒</i> 
               </div>
             </div>
             <button type="submit" className="login-button">Login</button>
+            <button type="button" className="register-button">Register</button>
           </form>
         </div>
-      );
+      </div>
+    );
 };
 
 export default Login;

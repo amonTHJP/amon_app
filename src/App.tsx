@@ -1,13 +1,24 @@
 import React from 'react';
-import './App.css';
-import Login from './pages/Login';
+import { Route, Routes } from 'react-router-dom';
+import Navbar from './components/Navbar/Navbar';
+import Sidebar from './components/Sidebar/Sidebar';
+import './components/global.css';
+import Home from './pages/Home';
 
-function App() {
-  return (
-    <div className="App">
-      <Login/>
-    </div>
-  );
+const App: React.FC = () => {
+    return (
+        <div className="app">
+            <Navbar />
+            <div className="main-content">
+                <Sidebar />
+                <div className="content">
+                    <Routes>
+                        <Route path="/home" element={<Home />} />
+                    </Routes>
+                </div>
+            </div>
+        </div>
+    );
+};
 
-}
 export default App;

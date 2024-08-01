@@ -1,9 +1,9 @@
 import React, { useState } from 'react';
 import '../styles/Login.css';
 import Button from '@mui/material/Button';
-import {purple} from '@mui/material/colors';
+import {grey} from '@mui/material/colors';
 
-const Buttoncolor = purple[500];
+const Buttoncolor = grey[50];
 
 const Login: React.FC = () => {
     const [username, setUsername] = useState('');
@@ -54,7 +54,7 @@ const Login: React.FC = () => {
                 <i className="icon">🔒</i> 
               </div>
             </div>
-            <button type="submit" className="login-button">Login</button>
+            <button type="submit" className="login-button" color='#f4f6f5'>Login</button>
             <div className="register-container">
               <Button href="/register" size="large" style={{ color: Buttoncolor }} className='register-button' >Register</Button>
             </div>

@@ -1,13 +1,16 @@
 import React from 'react';
 import './Sidebar.css';
 
-const Sidebar: React.FC = () => {
+interface SidebarProps {
+    isOpen: boolean;
+}
+
+const Sidebar: React.FC<SidebarProps> = ({ isOpen }) => {
     return (
-        <aside className="sidebar">
+        <aside className={`sidebar ${isOpen ? 'open' : ''}`}>
             <ul>
-                <li><a href="/">Dashboard</a></li>
-                <li><a href="/settings">Settings</a></li>
-                <li><a href="/profile">Profile</a></li>
+                <li><a href="/sale_amon">Sale Amon</a></li>
+                <li><a href="/no">test</a></li>
             </ul>
         </aside>
     );

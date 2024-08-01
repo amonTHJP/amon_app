@@ -3,7 +3,7 @@
     justify-content: space-between;
     align-items: center;
     padding: 1rem;
-    background-color: #333;
+    background-color: #121212;
     color: #fff;
 }
 
@@ -16,4 +16,8 @@
 .navbar a {
     color: #fff;
     text-decoration: none;
+}
+
+.navbar h1 {
+    margin-right: auto;
 }

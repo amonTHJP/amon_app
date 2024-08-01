@@ -1,7 +1,7 @@
 .sidebar {
     width: 250px;
     height: 100vh;
-    background-color: #444;
+    background-color: #1e1e1e;
     color: #fff;
     padding: 1rem;
 }
@@ -16,4 +16,34 @@
     text-decoration: none;
     display: block;
     padding: 0.5rem 0;
+}
+
+/* Responsive Sidebar */
+
+/* Toggle button for sidebar */
+.sidebar-toggle {
+    display: none;
+    margin-right: 13px;
+    left: 10px;
+    background-color: #121212;
+    color: white;
+    border: none;
+    font-size: 24px;
+    cursor: pointer;
+}
+
+/* Show toggle button on small screens */
+@media screen and (max-width: 1000px) {
+    .sidebar-toggle {
+        display: block;
+    }
+    .sidebar {
+        display: none;
+        overflow-x: hidden;
+    }
+    .sidebar.open {
+        width: 1000px;
+        display: block;
+        width: 250px;
+    }
 }

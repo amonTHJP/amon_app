@@ -1,18 +1,17 @@
 body, html {
     margin: 0;
     padding: 0;
-    font-family: 'Roboto', sans-serif; /* กำหนดฟอนต์หลัก */
+    font-family: 'Roboto', sans-serif; 
 }
 .login-container {
     display: flex;
     height: 100vh;
+    /* flex-direction: column; */
 }
 
 .left-side {
     flex: 1;
     background-image: url('/public/amon.jpg');
-    background-size: cover;
-    background-position: center;
     background-size: cover;
     background-position: center;
 }
@@ -30,8 +29,8 @@ body, html {
     border-radius: 8px;
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
     background-color: #101d26;
-    width: 600px;
-    height: 500px;
+    width: 90%; 
+    max-width: 600px; 
 }
     
 .login-form h2 {
@@ -120,4 +119,49 @@ h2 {
 
 .login-button:hover {
     background-color: #121212;
+}
+
+/* Media Queries for responsiveness */
+@media (min-width: 768px) {
+    .login-container {
+        flex-direction: row; /* Row layout for larger screens */
+    }
+
+    .login-form {
+        width: 600px; /* Fixed width for larger screens */
+        height: auto; /* Fixed height for larger screens */
+    }
+
+    .login-form h2 {
+        margin-bottom: 60px; /* Original margin for larger screens */
+        font-size: 40px; /* Original font size for larger screens */
+    }
+
+    .form-group label {
+        font-size: 20px; /* Original font size for larger screens */
+    }
+
+}
+
+@media screen and (max-width: 1366px) {
+    .left-side  {
+        display: none;
+    }
+
+    .right-side {
+        flex: 1;
+        background-image: url('/public/amon.jpg');
+        background-size: cover;
+        background-position: center;
+    }
+
+    .login-form {
+        width: 90%; 
+        height: auto; 
+    }
+
+    .login-form {
+        /* background-color: rgba(16, 29, 38, 0.5); */
+        background-color: rgb(16, 29, 38, 0.9);
+    }
 }

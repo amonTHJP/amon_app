@@ -33,7 +33,7 @@
 }
 
 /* Show toggle button on small screens */
-@media screen and (max-width: 1000px) {
+@media screen and (max-width: 1366px) {
     .sidebar-toggle {
         display: block;
     }
